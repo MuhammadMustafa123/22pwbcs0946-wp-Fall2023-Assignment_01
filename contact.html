@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form</title>
+    <style>
+        /* Internal CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(./contact.jpg);
+        }
+
+        .container {
+            max-width: 400px;
+            padding: 40px;
+            background-color:grey;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: #fff;
+        }
+
+        .form-group {
+            margin: 15px 0;
+            width: 75%;
+        }
+
+        label {
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #f10909;
+            border-radius: 4px;
+        }
+
+        textarea {
+            height: 150px;
+        }
+
+        input[type="submit"] {
+            background-color:black;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: red;
+        }
+        label{
+            color:black;
+            font-size: larger;
+            font-weight: bold;
+        }
+        a{
+            color: white;
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html">Return to Home</a>
+
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form action="process_form.php" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter Email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contact">Contact no:</label>
+                <input type="number" id="contact" name="contact" placeholder="Enter Contact no" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="write your message" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
